@@ -10,6 +10,9 @@ class Item extends SomeActiveRecord {
     /** @var string */
     private $_article;
 
+    /** @var float */
+    private $_weight;
+
     /** @var int */
     private $_width;
 
@@ -18,9 +21,6 @@ class Item extends SomeActiveRecord {
 
     /** @var int */
     private $_height;
-
-    /** @var int */
-    private $_quantity;
 
     /**
      * @return int
@@ -48,6 +48,20 @@ class Item extends SomeActiveRecord {
      */
     public function setArticle($article) {
         $this->_article = $article;
+    }
+
+    /**
+     * @return float
+     */
+    public function weigth() {
+        return $this->_weight;
+    }
+
+    /**
+     * @param float $weight
+     */
+    public function setWeight($weight) {
+        $this->_weight = $weight;
     }
 
     /**
@@ -90,19 +104,5 @@ class Item extends SomeActiveRecord {
      */
     public function setHeight($height) {
         $this->_height = $height;
-    }
-
-    /**
-     * @return int
-     */
-    public function quantity() {
-        return $this->_quantity;
-    }
-
-    /**
-     * @param int $quantity
-     */
-    public function setQuantity($quantity) {
-        $this->_quantity = $quantity;
     }
 }
