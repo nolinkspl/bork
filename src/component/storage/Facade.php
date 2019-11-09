@@ -13,4 +13,19 @@ class Facade {
     public function getDeliveryByName($name) {
         return CSL::keeper()->getDeliveryByName($name);
     }
+
+    /**
+     * @return entity\Delivery[]
+     */
+    public function getDeliveries() {
+        return CSL::keeper()->getDeliveries();
+    }
+
+    /**
+     * @param int $orderId
+     * @return array
+     */
+    public function getItemsByOrderId($orderId) {
+        return CSL::keeper()->getItems(['order_id' => $orderId]);
+    }
 }

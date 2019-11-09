@@ -2,6 +2,7 @@
 
 namespace src\component\storage;
 
+/** Component service locator */
 class CSL {
 
     /**

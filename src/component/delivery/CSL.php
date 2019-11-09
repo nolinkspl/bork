@@ -4,6 +4,7 @@ namespace src\component\delivery;
 
 use src\component\delivery\api\AdapterFactory;
 
+/** Component service locator */
 class CSL {
 
     /**

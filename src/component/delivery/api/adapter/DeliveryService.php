@@ -2,13 +2,14 @@
 
 namespace src\component\delivery\api\adapter;
 
+use src\component\storage\entity\Delivery;
+
 interface DeliveryService {
 
     /**
-     * @param string $senderAddress
-     * @param string $recipientAddress
+     * @param Delivery $delivery
      * @param array $items
      * @return array
      */
-    public function calculateDelivery($senderAddress, $recipientAddress, array $items);
+    public function calculateDeliveryInfo(Delivery $delivery, array $items);
 }

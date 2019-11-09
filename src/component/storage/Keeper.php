@@ -13,4 +13,19 @@ class Keeper {
     public function getDeliveryByName($name) {
         return entity\Delivery::findOne(['name' => $name]);
     }
+
+    /**
+     * @return entity\Delivery[]
+     */
+    public function getDeliveries() {
+        return entity\Delivery::findAll();
+    }
+
+    /**
+     * @param array $params
+     * @return array
+     */
+    public function getItems(array $params) {
+        return entity\Delivery::findAll($params);
+    }
 }

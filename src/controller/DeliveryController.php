@@ -13,15 +13,18 @@ class DeliveryController extends BaseController {
         $this->_deliveryComponent = DI::deliveryComponent();
     }
 
-    public function actionGetTurtleDeliveryInfo() {
+    public function actionGetCustomDeliveryInfo() {
         return $this->callWithJsonResponse(function () {
-            return $this->_deliveryComponent->getTurtleDeliveryInfo();
+            $deliveryName = RequestHelper::get('delivery_name');
+            $orderId = RequestHelper::get('order_id');
+            return $this->_deliveryComponent->getCustomDeliveryInfo($deliveryName, $orderId);
         });
     }
 
     public function actionGetDeliveryInfo() {
         return $this->callWithJsonResponse(function () {
-            return $this->_deliveryComponent->getDeliveryInfo();
+            $orderId = RequestHelper::get('order_id');
+            return $this->_deliveryComponent->getDeliveryInfo($orderId);
         });
     }
 }

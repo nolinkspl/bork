@@ -19,7 +19,7 @@ class Delivery extends SomeActiveRecord {
     /**
      * @return int
      */
-    public function getId() {
+    public function id() {
         return $this->_id;
     }
 
@@ -33,7 +33,7 @@ class Delivery extends SomeActiveRecord {
     /**
      * @return string
      */
-    public function getSenderAddress() {
+    public function senderAddress() {
         return $this->_senderAddress;
     }
 
@@ -47,7 +47,7 @@ class Delivery extends SomeActiveRecord {
     /**
      * @return string
      */
-    public function getRecipientAddress() {
+    public function recipientAddress() {
         return $this->_recipientAddress;
     }
 
@@ -61,7 +61,7 @@ class Delivery extends SomeActiveRecord {
     /**
      * @return string
      */
-    public function getName() {
+    public function name() {
         return $this->_name;
     }
 
