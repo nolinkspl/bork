@@ -6,7 +6,7 @@ use src\component\storage\entity\Delivery;
 
 class Bird implements DeliveryService {
 
-    static $name = 'BIRD';
+    const NAME = 'BIRD';
 
     /**
      * @param Delivery $delivery

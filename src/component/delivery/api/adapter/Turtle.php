@@ -6,7 +6,7 @@ use src\component\storage\entity\Delivery;
 
 class Turtle implements DeliveryService {
 
-    static $name = 'TURTLE';
+    const NAME = 'TURTLE';
 
     /**
      * @param Delivery $delivery
